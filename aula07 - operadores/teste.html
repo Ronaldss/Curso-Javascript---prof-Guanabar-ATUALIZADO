@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste</title>
+    <style>
+        body{
+            background-color:rgba(40, 23, 56, 0.924);
+        }
+        #adm{
+            background-color:coral;
+            color:darkblue;
+            width:100px;
+            height:100px;
+            line-height: 100px; /* texto no centro */
+            text-align: center; /* texto no meio */
+        }
+    </style>
+</head>
+<body onload="inicio()">
+    <div id="adm" onmousewheel="girou()" onclick="adm()" onmouseout="saiu()">Click!</div>
+    <script>
+        function inicio(){
+            console.log('A inicialização da página foi concluida.')
+        }
+        function girou(){
+            console.log('Girou!')
+        }
+        function adm(){
+            let name = window.prompt('Digite aqui seu nome: ') 
+            name === "Ronald" || name === "ronald" ? trocaNome() : negado()
+        
+            function trocaNome(){
+                name = "Ronald dos Santos Silva"
+                window.alert(`Olá ${name}, como vai?!`)
+                console.log(`Olá ${name}, seja bem vindo!`)
+            }
+            function negado(){
+                window.alert('Acesso negado!')
+                console.log('Acesso negado')
+            }
+        }
+        function saiu(){
+            
+        }
+    </script>
+</body>
+</html>

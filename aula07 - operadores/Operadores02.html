@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operadores - Parte 2 </title>
+</head>
+<body>
+    <script>
+        // Caso se tenha operadores aritméticos e operadores relacionais na mesma linha
+        // resolve-se primeiro os aritméticos e depois os relacionais
+
+        var a = 10;
+        var b = 20;
+        
+        var resultado = a <= b - 15;
+
+        // ---------------------------------------------------------------------------------
+        // OPERADORES RELACIONAIS
+        // > <  >= <= == !=
+        // O resultado destes operadores sempre será um valor booleano (true, false).
+        //
+        // O operador relacional == é diferente do ===
+        // o == verifica apenas se uma grandeza é igual a outra, por ex. se 2 == "2". Neste caso a resposta é true, pois o tipo da variavel n está sendo levado em consideração.
+        //
+        // O operador === (lê-se 'idêntico') verifica a grandeza e o tipo. É usado no JS para verificar se 'realmente é igual'
+        // 2 === "2", neste caso a resposta é false.
+
+        // ---------------------------------------------------------------------------------
+
+        // ###OPERADORES LÓGICOS
+        //
+        //  !  && ||
+        //
+        //  ! - negação
+        //  && - conjução
+        //  || - disjunção
+        // Caso se tenha operadores aritméticos, relacionais e lógicos na mesma linha,
+        // resolve-se primeiro os aritiméticos, depois os relacionais e por fim os lógicos.
+        //
+        //exemplo :  a > b && b % 2 == 0
+        //exemplo2:  a <= b || b /2 == 2
+        //
+        // Caso se tenha um &&, um || e um ! na mesma linha. A ordem de execução é, primeiro o !, depois o && e por fim o ||.
+        // ! - && - ||
+        //---------------------------------------------------------------------------------------------------------------------
+        //
+        // ###OPERADOR TERNÁRIO
+        // Condição(true,false)? 'VERDADEIRO' : 'FALSO'
+        //
+        // exemplo:
+        // var idade = 19
+        // var resultado = idade >= 18 ? 'MAIOR' : 'MENOR'
+        // 
+        // neste caso: var resultado = 'MAIOR'
+        //
+        //---------------------------------------------------------------------------------------------------------------------
+        function verdadeiro(){
+            document.write(`O valor ${valor} é maior ou igual que 16: verdadeiro!`);
+        };
+        function falso(){
+            document.write(`O valor ${valor} é maior ou igual a 16: Falso!`);
+        };
+
+        window.alert(`Testando o OPERADOR TERNÁRIO.`)
+        var valor = Number.parseFloat(window.prompt('Digite um valor numérico: '));
+        
+        // ### OPERADOR TERNÁRIO
+        var result = valor >= 16 ? verdadeiro() : falso()
+        
+    </script>
+</body>
+</html>
