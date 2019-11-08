@@ -1,0 +1,30 @@
+body {
+    background: rgb(73, 128, 255);
+    font: normal 15pt Arial;
+}
+header {
+    color: white;
+    text-align: center;
+}
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;         /* Centralizando a TAG */
+    *text-align: center;  /* Centralizando o texto */
+
+    box-shadow: 5px 5px 10px rgba(49, 49, 49, 0.383);
+}
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+div {
+    text-align: center;
+    padding: 8px;
+}
+#imagem {
+    border-radius: 100px;
+}

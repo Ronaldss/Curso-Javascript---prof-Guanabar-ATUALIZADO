@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saldando - Hora do dia.</title>
+    <style>
+        body{
+            background-color: slateblue;
+            color: 'white';
+        }
+        #container{
+            background-color: indianred;
+            color: white;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 10px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="cx1">
+        Que horas são: <input type="text" name="hr" id="hr">
+        <input type="button" value="Verificar" onclick="verificar()">
+    <hr>
+    </label>
+    <div id="container">
+        Aqui: 
+    </div>
+    <script>
+        /*
+        
+            LEAME: Baseado na hora atual que consta no sistema operacional.
+                   não precisa digitar nada, verifica automático.
+
+        */
+        
+        /* VARIÁVEIS EXTERNAS */
+        var agora = new Date()
+        var hr = agora.getHours()
+        //var hr2 = window.document.getElementById('hr')
+
+        var container = window.document.getElementById('container')
+         /* FUNÇÃO PRINCIPAL */
+        function verificar(){
+            console.log(`Hora atual: ${hr} hs.`)
+            console.log('Variável: ' + typeof(hr))
+            if( hr <= 5 ){
+                madru()
+            }else if(hr < 12){
+                manha()
+            }else if(hr == 12){
+                meioDia()
+            }else if(hr > 12 && hr < 19){
+                tarde()
+            }else{
+                noite()
+            }
+        }
+
+
+       
+        /* FUÇÕES SECUNDÁRIAS */
+        function madru(){
+            //container.innerHTML += window.document.write(`Hora atual: ${hr.value}hs - Boa madrugada!`)
+            container.innerHTML = `Hora atual: ${hr}hs - <strong>Boa madrugada!</strong>`
+        }
+        function manha(){
+            container.innerHTML = `Hora atual: ${hr}hs. <strong>Bom dia!</strong>`
+        }
+
+        function meioDia(){
+            container.innerHTML = `Agora são ${hr}hs. <strong>Vamos almoçar!</strong>`
+        }
+        function tarde(){
+            container.innerHTML = `Hora atual: ${hr}hs. <strong>Tenha uma boa tarde!</strong>`
+        }
+        function noite(){
+            container.innerHTML = `Hora atual: ${hr}hs. <strong>Boa noite!</strong>`
+        }
+        
+    </script> 
+</body>
+</html>

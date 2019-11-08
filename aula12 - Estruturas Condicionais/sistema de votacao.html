@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Sistema de votação</title>
+		<style></style>
+		<style>
+			body{
+				font: Arial 20pt;
+				background-color: #757575;
+				color: white;
+			}
+			h1{
+				color: black;
+			}
+			input{
+				border-radius: 60px;
+			}
+			#container{
+				background-color: orange;
+				color: black;
+				height:50px;
+				text-align: center;
+				line-height: 50px;
+				border-radius:60px;
+			}
+		</style>
+	</head>
+	<body onload="hi()">
+		<hr>
+		<h1>Sistema de votação</h1>
+		<!-- LÓGICA
+			Votação: * menor que 16 n vota;
+					 * menor que 18 e maior que 65 opcional;
+					 * outra condição o voto é obrigatório.
+		-->
+		<hr>
+		Digite aqui sua idade: <input type="text" id="txt1" name="txt1">
+		
+		<input type="button" value="Ok" onclick="sist_votacao()"><br>
+		<br><br><br><br>
+		<div id="container"></div>
+		
+		<script>
+			function sist_votacao(){
+				let idade = window.document.getElementById('txt1').value
+				let container = window.document.getElementById('container')
+				console.log(`Você tem ${idade} anos.`)
+					
+				if ( idade < 16 ){
+					container.innerHTML = `Com ${idade} anos de idade não vota.`
+					console.log('Não vota.')
+				}else if( idade < 18 || idade > 65 ){
+					container.innerHTML = `Com ${idade} anos de idade, votação opcional.`
+					console.log('Votação opcional.')
+				}else{
+					container.innerHTML = `Com ${idade} anos de idade, votação <strong>OBRIGATÓRIA</strong>!`
+					console.log('Votação OBRIGATÓRIA!')
+				}
+			}
+			
+			function hi(){
+				let nome = window.prompt('Olá! Qual o seu nome?')
+				window.alert(`Olá ${nome}. Seja Bem Vindo(a) !!!`)
+			}
+		</script>
+		
+	</body>
+</html>
+
+
+
+
+
