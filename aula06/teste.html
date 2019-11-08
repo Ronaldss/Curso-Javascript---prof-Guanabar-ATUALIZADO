@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste - tipos de dados</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+            color: #fff;
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n1 = Number.parseFloat(window.prompt('Digite um número: ')); 
+        var n2 = Number.parseFloat(window.prompt('Digite aqui outro número: '));
+        var soma = n1 + n2;
+        window.alert(`A soma entre ${n1} e ${n2} é: ${soma}.`) // Usando Template String. Use crase.
+
+        var nome = window.prompt('Digite seu nome: ');
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br/>`);
+        document.write(`Seu nome em maiusculas é: ${nome.toUpperCase()}. <br/>`); // .toUpperCase altera a string para maiuscula.
+        document.write(`Seu nome em minúsculas é: ${nome.toLowerCase()}. <br/>`);
+        continuar = window.confirm(`${nome}, deseja continuar?`);
+            if (continuar) {
+                document.write(`Usuário administrador ${nome}, agora está no controle deste website. :-)`);
+            }else{
+                window.alert('The End!');
+            }
+    </script>
+    <p>Inicializando...</p>
+    
+</body>
+</html>

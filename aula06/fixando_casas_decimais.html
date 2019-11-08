@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fixando número de casas decimais</title>
+</head>
+<body>
+    <script>
+        n1 = 1545.5
+        window.alert(`Antes: ${n1}`); 
+        window.alert(`Depois: ${n1.toFixed(5)}`); // mostrando mais casas decimais
+        window.alert('Agora vou trocar o ponto por uma virgula.');
+        window.alert(`Com ponto: ${n1.toFixed(5)}.\nCom virgula: ${n1.toFixed(5).replace('.',',')}.`); // alterando um caracter de um string
+        window.alert(`Agora convertendo em real: ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`);
+        window.alert(`Agora convertendo para dolar: ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}`);
+    </script>
+</body>
+</html>
