@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nascionalidade</title>
+    <style>
+        body{
+            background-color:rgb(53, 23, 53);
+            color:white;
+            font-family: arial;
+            bottom: 0;
+            top: 0;
+        }
+        h1{
+            background: teal;
+            border-radius: 60px;
+            text-align:center;
+        }
+        input{
+            border-radius:60px;
+        }
+        .detalhes{
+            background-color: tomato;
+            height:50px;
+            *text-align:center;
+            line-height:50px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body onload="saudacao()">
+    <h1>Qual sua nascionalidade?</h1>
+    <div id="centro">
+        <p class="detalhes">
+            País: <input type="text" name="txtp" id="txtp">
+
+            <!-- Como posicionar este botão a direita da tela -->
+            <input type="button" value="OK" onclick="clicou()">
+        </p>
+    <div>
+        <p id="texto" class="detalhes" style="text-align:center"></p>
+    </div>
+    </div>
+    
+    <script>
+        function clicou(){
+            var res = window.document.querySelector('p#texto')
+            var pais = window.document.getElementById('txtp').value
+            //var transformando = Number(res)
+
+            res.innerHTML = `Vivendo no país ${pais},`
+            console.log(`País escolhido: ${pais}`)
+
+            if (pais === "Brasil" || pais === "brasil"){
+                res.innerText += "você é brasileiro!"
+            }else{
+                res.innerText += "você é estrangeiro."
+            }
+            
+        }
+        function saudacao(){
+            window.alert('Considerando país local Brazil.');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detran</title>
+    <style>
+        body{
+            background-color:rgb(49, 39, 59);
+            color:white;
+        }
+        #quadrado{
+            height: 100px;
+            *width: 90%;
+            text-align:center; /* texto no meio */
+            line-height: 100px; /* texto no centro */
+
+        }
+        .branco{
+            background-color:white;
+            color:black;
+        }
+        .rd{
+            background-color:red;
+        }
+        .v{
+            background:green;
+            text-align:center
+        }
+    </style>
+</head>
+<body>
+    <h1 class="v">Sistema de multas</h1>
+    Digite aqui sua velocidade: <input type="number" name="txtVel" id="txtVel">Km/h
+    <input type="button" value="Verificar" onclick="clicou()"><hr>
+    <div id="res">
+        
+    </div>
+    <script>
+        function clicou(){
+
+            var txtv = window.document.getElementById("txtVel")
+            var res = window.document.querySelector('div#res')
+            var vel = Number.parseFloat(txtv.value) // transformando em valor numérico.
+
+            res.innerHTML = `<p>Sua velocidade atual é de <strong class="branco">${vel}</strong> Km/h</p>`
+            if ( vel > 90 ){
+                res.innerHTML += `<p>Você foi <strong class="rd">MULTADO</strong> por excesso de velocidade!</p>`
+            }
+            res.innerHTML += `<p id="quadrado" class="v">Dirija sempre com o cinto de segurança!</p><hr>`
+        }
+        
+    </script>
+</body>
+</html>
