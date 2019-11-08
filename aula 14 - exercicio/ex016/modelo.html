@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de contagem</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- Chamndo folha de estilo externa -->
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>    
+    <section>
+        <div>
+            <p>Início:
+                <input type="number" name="inicio" id="v1" min="0" class="angulo">
+            </p>
+            <p>Fim:
+                <input type="number" name="fim" id="v2" min="0" class="angulo">
+            </p>
+            <p>Passos:
+                <input type="number" name="passo" id="passo" min="0" class="angulo">
+            </p>
+            <input type="button" value="Contar" onclick="contar()" class="bt"> 
+        </div>
+        <div id="contando2"><br>
+            <p style="color: black;" id="contando">Contando: <br></p>
+        </div>
+        <div><input type="button" value="Tchal!" id="xau" onclick="xau()" class="bt"></div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo - aluno: RonaldsS</p>
+    </footer>
+    <script src="script.js"></script> <!-- Chamando script JS sterno -->
+    <script src="tchal.js"></script>
+</body>
+</html>

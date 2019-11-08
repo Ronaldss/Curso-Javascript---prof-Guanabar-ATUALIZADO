@@ -1,0 +1,35 @@
+body {
+    background: rgb(51, 1, 98);
+    font: normal 15pt Arial;
+}
+header {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+section {
+    background: rgba(255, 255, 255, 0.493);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;         /* Centralizando a TAG */
+    *text-align: center;  /* Centralizando o texto */
+
+    box-shadow: 5px 5px 10px rgba(49, 49, 49, 0.801);
+}
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+#contando2{
+    color: white;
+}
+
+.angulo{
+    border-radius: 5px;
+    background-color: rgb(20, 1, 37);
+    color: white;
+}
+.bt{
+    border-radius: 9px;
+}
