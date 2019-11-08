@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - Eventos</title>
+    <style>
+        div#area{
+            background-color:green;
+            color: white;
+            width: 200px;
+            height: 200 px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    <script>
+
+        var muda = window.document.getElementById('area')
+        
+        /* São ouvidores, ficam prestando atenção todo momento */
+        muda.addEventListener('click', clicar)
+        muda.addEventListener('mouseenter', entrar)
+        muda.addEventListener('mouseout', sair)
+        
+        function clicar(){
+            muda.innerText = 'Clicou!'
+            muda.style.background = 'red'
+        }
+
+        function entrar(){
+            muda.innerText = 'Entrou!'
+        }
+
+        function sair(){
+            window.document.getElementById('area').innerText = 'Saiu!'
+            window.document.getElementById('area').style.background = 'green'
+        }
+    </script>
+</body>
+</html>

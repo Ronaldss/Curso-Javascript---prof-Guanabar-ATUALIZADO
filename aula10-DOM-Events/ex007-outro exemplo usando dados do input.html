@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="texto">Texto: </div>
+<div id="numero">Número: </div>
+
+Texto: <input type="text" id="textoDigitado">
+Número: <input type="number" name="numero" id="numeroDigitado">
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+
+function myFunction() {
+  var texto = window.document.getElementById('texto')
+  var numero = window.document.getElementById('numero')
+  texto.innerHTML = window.document.getElementById('textoDigitado').value
+  numero.innerHTML = window.document.getElementById('numeroDigitado').value
+}
+</script>
+
+</body>
+</html>

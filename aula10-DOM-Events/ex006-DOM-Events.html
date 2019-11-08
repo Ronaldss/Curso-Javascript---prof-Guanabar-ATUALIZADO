@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - Eventos</title>
+    <style>
+        div#area{
+            background-color:green;
+            color: white;
+            width: 200px;
+            height: 200 px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Usando enventos direto no HTML, neste exemplo eles são chamados la na tag
+         script, dentro do JS. Ou tra forma de fz sem deixar o HTML tão poluido é usando
+         .addEventListener direto no JavaScript 
+    -->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    <script>
+
+        var muda = window.document.getElementById('area')
+
+        function clicar(){
+            muda.innerText = 'Clicou!'
+            muda.style.background = 'red'
+        }
+
+        function entrar(){
+            muda.innerText = 'Entrou!'
+        }
+
+        function sair(){
+            window.document.getElementById('area').innerText = 'Saiu!'
+            window.document.getElementById('area').style.background = 'green'
+        }
+    </script>
+</body>
+</html>

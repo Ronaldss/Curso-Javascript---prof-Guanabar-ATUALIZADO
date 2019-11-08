@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+      <input type="text" name="user" id="user" value="Ronald" ronald="eu"><br>
+      <input type="text" name="user" id="user" value="Maylon"><br><br><br>
+
+      Digite aqui seu cód: <input type="number" name="ronald"  id="txtn1"><br><br>
+  
+      <input type="button" value="Acessar" onclick="myFunction()">
+
+      <p id="demo">-- Saida --</p>
+  
+  
+  <script>
+     function myFunction() {
+        var escolha  = window.document.getElementById('txtn1').value
+        
+        if (escolha){
+          window.alert('O valor digitado não pode ser maior que 2 (dois), nem menor que (0) zero.')
+          verifica()
+        }
+        function verifica(){
+          if (escolha < 0 || escolha > 1){
+          escolha = null
+          console.log(`O valor de escolha é: ${escolha}.`)
+         }else{
+           cont()
+         }
+        }
+        
+        if ( escolha == null ){
+         var escolha =  window.prompt('Digite aqui o seu cód: ')
+          verifica()
+        }
+        
+        /*console.log(
+          document.getElementsByTagName("input")[escolha].value
+
+        )
+        */
+      function cont(){
+        if (escolha == null){
+          var escolha = window.prompt('Digite aqui o cod novamente: ')
+          verifica()
+        }else{
+        var saida = window.document.getElementsByTagName("input")[escolha].ronald
+        window.document.getElementById('demo').innerHTML = saida}
+      }  
+       
+    
+      }
+  
+  </script>
+</body>
+</html>
