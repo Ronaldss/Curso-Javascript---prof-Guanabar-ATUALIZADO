@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promeiros passos com DOM</title>
+    <style>
+        body{
+            background-color:orange;
+            color:white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alterações via DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>     
+    <div id="msg">Click em mim.</div>
+    <script>
+    
+        // Pintando background de outra cor
+        var corpo = window.document.body  // Criando variavel corpo para abreviar o caminho
+        corpo.style.background = 'blue';
+        
+        // Guardando o conteudo texto de uma tag em variável.
+        var p1 =  window.document.getElementsByTagName('p')[0]; // guardando o texto de uma tag p
+        window.document.write('Retorno sem respeitar negrito: ' + p1.innerText + '. ') // chamando o texto que está na variável p1
+        p1.style.color = 'pink' // Alerando o style de uma tag
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Retorno respeitando o negrito: ' + p2.innerHTML);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promeiros passos com DOM</title>
+    <style>
+        body{
+            background-color:#11227777;
+            color:white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alterações feitas via  DOM</h1>
+      
+    <div id="msg">Isto será alterado via ID.</div>
+   
+    <script>
+        /*
+            Alterando o conteúdo de uma tag, usando getElementById.
+        */
+        var ronald = window.document.getElementById('msg');
+        ronald.style.background = 'green'
+        ronald.innerText = 'Ainda estou aguardado...'
+
+    </script>
+</body>
+</html>

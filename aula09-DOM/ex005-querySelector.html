@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promeiros passos com DOM</title>
+    <style>
+        body{
+            background-color:#325488;
+            color:white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alterações feitas via  DOM</h1>
+      
+    <div id="msg">Isto será alterado via ID.</div>
+    <div class="msg">Isto será alterado via class.</div>
+    <script>
+        /*
+            Alterando o conteúdo de uma tag, usando querySelector.
+            Na tag original dever ter uma class ou um id.
+        */
+        var ronald = window.document.querySelector('div#msg') // Com ID
+        ronald.style.background = 'blue';
+        ronald.innerText = 'Isto foi alterado via id.'
+
+        var emanuella = window.document.querySelector('div.msg')
+        emanuella.style.background = 'pink'
+        emanuella.style.color = 'black'
+        emanuella.innerText = 'Isto foi alterado via class.'
+    </script>
+</body>
+</html>
