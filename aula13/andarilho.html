@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Andarilho</title>
+    <style>
+        body{
+            background: #19181F;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- coluna da casa -->
+    <p id="quarto"></p>
+    <script>
+        // Lugar de nascimento do player
+        var casa = document.querySelector("p#quarto")
+
+        // Criando o player
+        function criandoTom(){
+            let tom = document.createElement('img')
+            tom.setAttribute('src','player.png')
+            tom.setAttribute('alt','Problema com a imagem')
+            tom.style.borderRadius = "100%"
+
+            // Chamando o player
+            casa.appendChild(tom)
+        }
+            if(criandoTom()){multiplicar()}
+            // Tom a se multiplicar
+            function multiplicar(){
+                var individuo = 1
+                if (individuo <=100){
+                    criandoTom()
+                    setTimeout("multiplicar()",3000)
+                    console.log(`Criando ${individuo}.`)
+                    individuo++
+                }
+                console.log(`Foram criados ${individuo} individuos.`)
+                console.log(`Não consigo mais me multiplicar!`)
+            }
+        criandoTom()
+        var indice = 0
+    </script>
+    <script src="ambiente.js"></script> 
+</body>
+</html>
