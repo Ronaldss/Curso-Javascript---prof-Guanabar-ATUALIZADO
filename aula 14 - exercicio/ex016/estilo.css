@@ -21,8 +21,9 @@ footer {
     text-align: center;
     font-style: italic;
 }
-#contando2{
+#contando{
     color: white;
+    margin-top:0;
 }
 
 .angulo{
