@@ -3,8 +3,7 @@ function gerar(){
     let casa = window.document.getElementById("lista")
 
     // length ou 'comprimento', forma de pegar quantas letras tem dentro do input.
-    console.log(`*${String(entrada)}*`)
-    if(String(entrada) == "" || entrada == "0"){
+    if(entrada == "" || entrada == "0"){
         window.alert("Iremos considerar campo entrada com \n valor igual a zero!")
     }
     entrada = Number(entrada)
