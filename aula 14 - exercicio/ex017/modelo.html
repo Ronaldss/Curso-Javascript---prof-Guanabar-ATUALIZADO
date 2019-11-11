@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Modelo de Exercício</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="estilo.css"> <!-- Chamndo folha de estilo externa -->
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Gerar tabuada</h1>
     </header>    
     <section>
-        <div >Aqui vai alguma informação</div>
-        <div >123...</div>
+        <div >
+            <p>Digite um número
+                <input type="number" name="n1" id="entrada">
+                <input type="button" value="Gerar tabuada" onclick="gerar()">
+            </p>   
+        </div>
+        <div >
+            <select name="nlista" id="lista">
+            </select>
+        </div>
     </section>
     <footer>
-        <p>&copy; CursoemVideo</p>
+        <p>&copy; CursoemVideo - RonaldsS</p>
     </footer>
     <script src="script.js"></script> <!-- Chamando script JS sterno -->
 </body>
