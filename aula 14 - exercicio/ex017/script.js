@@ -7,6 +7,7 @@ function gerar(){
         window.alert("Iremos considerar campo entrada com \n valor igual a zero!")
     }
     entrada = Number(entrada)
+    console.log(typeof(entrada))
     for(var i=0; i <= 10; i++){
         var resul = entrada*i
         casa.innerHTML += `<option value="">${entrada} x ${i} = ${resul}</option>`
