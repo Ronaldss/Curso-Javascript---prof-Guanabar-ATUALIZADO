@@ -1,5 +1,5 @@
 body {
-    background: rgb(255, 0, 76);
+    background: rgb(37, 93, 138);
     font: normal 15pt Arial;
 }
 header {
@@ -15,7 +15,7 @@ section {
     margin: auto;         /* Centralizando a TAG */
     *text-align: center;  /* Centralizando o texto */
 
-    box-shadow: 5px 5px 10px rgba(49, 49, 49, 0.383);
+    box-shadow: 5px 5px 10px rgba(255, 249, 249, 0.643);
 }
 footer {
     color: white;
